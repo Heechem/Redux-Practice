@@ -10,17 +10,9 @@ import {
 import PostExcerpt from './PostExcerpt';
 
 const PostList = () => {
-  const dispatch = useDispatch();
-
   const postStatus = useSelector(getPostsStatus);
   const posts = useSelector(selectAllPosts);
   const error = useSelector(getpostsError);
-
-  useEffect(() => {
-    if (postStatus === 'idle') {
-      dispatch(fetchPosts());
-    }
-  }, [postStatus, dispatch]);
 
   let content;
 
