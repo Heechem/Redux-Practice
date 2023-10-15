@@ -5,7 +5,7 @@ import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 import { fetchUsers } from './features/users/userSlice';
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { fetchPosts } from './features/posts/postsSlice';
 store.dispatch(fetchUsers());
 store.dispatch(fetchPosts());
